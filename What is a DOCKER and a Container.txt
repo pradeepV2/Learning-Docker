@@ -1,0 +1,103 @@
+What is a DOCKER?
+Docker is a TOOL which provides CONTAINERIZATION
+
+What is CONTAINERIZATION?
+Process of creating CONTAINERS
+
+What is a CONTAINER?
+CONTAINER is the machine/server that runs the application
+
+CONTAINER vs VIRTUAL MACHINES(VM)
+-> On-premise servers/VMs were not hosted on CLOUD and they require an O.S before the CONTAINERS existed
+-> CONTAINER solved the problem of the VMs
+-> CONTAINERS are now hosted on the CLOUD
+-> CONTAINERS will use IMAGES(Operating System level)
+-> CONTAINER will package the CODE(Application) and the Environment related packages (git, maven, Jenkins)
+
+-> We create CONTAINERS on the EC2 instance
+-> LINODE is a Cloud provider
+
+---------------------------------------------------------------------------------------
+
+What is the advantage of DOCKER for the DEVOPS ENGINEER?
+
+-> Docker is a tool for creating CONTAINERS
+
+What is the advantage of CONTAINERS for DEVOPS ENGINEERS?
+-> Multiple servers (EC2) costs a lot of MONEY
+-> Replace servers with CONTAINERS
+
+Earlier : -
+10 servers (Ec2)
+
+Now : -
+1 Ec2 instance and 10 containers, inside the EC2
+
+-------------------------------------------------------------------------------------
+PAYPAL or VENMO or APPLE PAY
+-> Online payment services
+
+Example of PayPal services: -
+-> For making payments on EBAY (E-commerce)
+-> Transfer Money
+-> Flight Booking
+-> Recharge Phone/D2H/WIFI
+-> Hotel
+-> Movie Ticket
+
+-> One Application with SIX Services are running on ONE SINGLE server 
+1 million -> ON a SALE day, if 10 millions users login
+
+-> SERVER will also CRASH
+-> Service will crash because of very high load
+-> Problem is too many services running on ONE Server
+
+-------------------------------------------------------------------------
+
+How can I solve this problem?
+-> Multiple services use Multiple servers 
+
+-> For making payments (EBAY) -> Server-1
+-> Transfer Money -> Server-2
+-> Flight Booking -> Server-3
+-> Recharge Phone/D2H/WIFI -> Server-4
+-> Hotel -> Server-5
+-> Movie Ticket -> Server-6
+----------------------------------------------------------------------------
+
+MicroService Architecture: -
+IF I use Multiple servers for Multiple services 
+
+MONOLITHIC Architecture: -
+IF I use One server for Multiple services 
+
+----------------------------------------------------------------------------------
+
+Why do we need an IMAGE for creating CONTAINERS ?
+
+-> Just like the way we use AMAZONMACHINEIMAGES(LINUX/MACOS/UBUNTU/WIN/REDHAT) for creating EC2 Instances, here we use DOCKER-IMAGES for creating DOCKER-CONTAINERS
+
+----------------------------------------------------------------------------------
+
+STEPS for CREATING CONTAINERS: -
+
+1. Create an EC2 Instance
+2. Install DOCKER on the EC2 Instance
+3. START the DOCKER Service
+4. Pull Image from the DOCKER (HOST/REGISTRY)
+5. Create the CONTAINERS
+
+
+------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
