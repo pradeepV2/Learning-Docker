@@ -92,7 +92,35 @@ STEPS for CREATING CONTAINERS: -
 
 
 
+Step-1: -
+Create a Container-1 using the Base-IMAGE (Ubuntu/AmazonLinux/MacOS/WIN)
+Commands :
+-> docker pull ubuntu
+-> docker run -it --name container-1 ubuntu
 
+Step-2: -
+Install the required packages inside the Container-1 which we have created
+-> apt update -y
+-> apt install maven -y
+-> apt install git -y
+-> apt install apache2 -y
+-> apt install mysql-server -y
+-> apt install python3 -y
+
+
+Step-3: -
+You can run your application
+-> Run the application
+
+Step-4: -
+Create an PROJECT-IMAGE using the CONTAINER-1 (Packages, Code, OS) I have created
+-> docker commit container-1 IMAGE-project
+
+Step-5: -
+Create a copy of CONTAINER using the PROJECT-IMAGE and Verify if all the packages are reflecting or not
+-> docker run -it --name container-2 IMAGE-project
+
+---------------------------------------------------------------------------------------------
 
 
 
