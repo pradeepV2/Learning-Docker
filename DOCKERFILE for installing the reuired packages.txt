@@ -103,12 +103,14 @@ Copy the public IP of the EC2 instance and access the web application using the 
 Scenario 4 : - Micro services Project
 
 Monolithic vs Microservices project 
-One server with many services -> monolithic
+One server with many services -> Monolithic
 Multiple servers with multiple Services -> Microservices
 
-CONTAINERS -> PODS -> 
+-------------------------------------------------------------------------------
 
-  
+DOCKER IMAGE -> DOCKER CONTAINER -> KUBERNETES PODS(YAML) -> KUBERNETES DEPLOYMENT(YAML)
+
+One or more containers make a PODS (image, dockerhub, Load Balancers)
 
 
 
