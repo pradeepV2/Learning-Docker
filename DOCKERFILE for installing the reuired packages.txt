@@ -1,0 +1,126 @@
+docker pull ubuntu/amazonlinux (Manually run the command)
+-> FROM ubuntu/amazonlinux (dockerfile)
+
+apt update -y (command line)
+-> RUN apt update -y (dockerfile)
+
+
+apt install git -y (command line)
+-> RUN apt install git -y
+
+apt install apache2 (command line)
+-> RUN apt install apache2 (dockerfile)
+
+-> docker run -it --name container1 ubuntu
+
+
+----------------------------------------------- DOCKER FILE ----------------------------
+FROM ubuntu/amazonlinux
+
+RUN apt update -y
+
+RUN apt install git -y
+
+RUN apt install apache2 (dockerfile)
+
+RUN apt install python3 
+
+RUN apt install mysql-server
+
+RUN apt install maven
+
+---------------------------------------------------------------------------------------------
+
+1. Install Docker on your EC2 instance and start the docker service
+-> yum install docker
+-> systemctl start docker
+-> systemctl status docker
+
+2. Create a directory for our project -> project1
+-> mkdir project1
+
+3. Create a Dockerfile -> All the commands for installing the packages
+-> touch Dockerfile
+-> vi Dockerfile
+FROM ubuntu
+RUN apt update -y
+RUN apt install git -y
+RUN apt install maven -y
+RUN apt install apache2 -y
+RUN touch file123
+
+4. Create an image using the Dockerfile (all packages are present in this IMAGE)
+-> docker build -t image1 .
+
+5. Create a CONTAINER using the above image (Lets verify the packages inside the container)
+-> docker run -it --name conainer123 image1
+
+----------------------------------------------------------------------------------------------------
+
+Create a DOCKER IMAGE using a DOCKERFILE for hosting a WEBSERVER 
+
+-> WEB APPLICATION -> Docker images
+-> PRIME/NETFLIX APP -> Docker Images
+-> PAYMENT APP -> Docker Images
+-> Application + Data Base -> Docker Images
+-> Mobile APP -> Docker Images
+
+Scenario 1 : -
+Created EC2 instance,  created containers, Installed packages, created Image -> Manually installed packages
+
+Scenario 2 : -
+Created Ec2 instance, created Dockerfile, Build Image, Created a Container -> Using Dockerfile installed packages
+
+----------------------------------------------------------------------------------------------------------------------------------
+Scenario 3 : - Real world scenario (WEB APPLICATION)
+
+Create a DOCKER IMAGE using a DOCKERFILE for hosting a WEBSERVER 
+
+1. Create an Ec2 instance (micro) and Install docker and start the docker service
+
+2. Create a project directory
+
+3. index.html -> Web page structure 
+
+4. Create a Dockerfile and pull a base Image (WEB-SERVER-> APACHETOMCAT/NGINX/)
+--------------------------------------------------------------
+FROM nginx:stable-alpine3.17-slim
+COPY index.html /usr/share/nginx/html/
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+--------------------------------------------------------------
+5. Create a Docker Image
+-> docker build -t sampleapp:v1 .
+
+6. Run the Docker image and access the web application through web browser
+-> docker run -p 8080:80 sampleapp:v1
+
+7. We will see the output
+Copy the public IP of the EC2 instance and access the web application using the port 8080
+
+---------------------------------------------------------------------------------------------------
+
+Scenario 4 : - Micro services Project
+
+Monolithic vs Microservices project 
+One server with many services -> monolithic
+Multiple servers with multiple Services -> Microservices
+
+CONTAINERS -> PODS -> 
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
